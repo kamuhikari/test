@@ -4,21 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
-    
-      <div id="app">{{ message }}</div>
-
-
+    <div contenteditable="true" class="editable-text">
+        Click to edit this birthday message!
+      </div>
       
-      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-      <script>
-        Vue.createApp({ data() { return { message: "Hello without Node.js!" } } })
-          .mount('#app');
-      </script>
-
-
+      <script src="index.js"></script>
 </body>
 </html>
     
