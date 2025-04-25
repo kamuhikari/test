@@ -1,15 +1,10 @@
-export default {
-    data() {
-      return {
-        editableItems: [
-          { text: "Happy Birthday!", color: "#ff69b4" },
-          // More editable elements...
-        ]
-      };
-    },
-    methods: {
-      saveDesign() {
-        // Save to Firebase/backend or generate download link
+import { ColorPicker } from '@vueform/color-picker' // or your chosen package
+      
+      export default {
+        components: { ColorPicker },
+        data() {
+          return {
+            color: '#3498db'
+          }
+        }
       }
-    }
-  };

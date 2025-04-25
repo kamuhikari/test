@@ -9,20 +9,14 @@
 <body>
     
     <template>
-        <div class="template-editor">
-          <!-- Editable Components -->
-          <div v-for="(item, index) in editableItems" :key="index">
-            <input v-model="item.text" placeholder="Enter text">
-            <color-picker v-model="item.color"></color-picker>
-            <button @click="saveDesign">Save Changes</button>
-          </div>
-          
-          <!-- Preview -->
-          <div class="template-preview">
-            <h1 :style="{ color: editableItems[0].color }">{{ editableItems[0].text }}</h1>
-          </div>
+        <div>
+          <color-picker v-model="color" />
+          <p>Selected: {{ color }}</p>
         </div>
       </template>
+      
+<script src="https://unpkg.com/vue@3"></script>
+<script src="https://unpkg.com/vue-color@2"></script>
       
       <script src="index.js"></script>
 </body>

@@ -1,4 +1,6 @@
 
+@import '@vueform/color-picker/themes/default.css';
+
 .editable-text {
     padding: 10px;
     border: 1px dashed transparent;
