@@ -1,14 +1,15 @@
-document.getElementById('edit-btn').addEventListener('click', () => {
-    const currentText = document.getElementById('display-message').innerText;
-    const newText = prompt("Edit message:", currentText);
-    if (newText) {
-      document.getElementById('display-message').innerText = newText;
-      localStorage.setItem('customMessage', newText); // Save locally
+export default {
+    data() {
+      return {
+        editableItems: [
+          { text: "Happy Birthday!", color: "#ff69b4" },
+          // More editable elements...
+        ]
+      };
+    },
+    methods: {
+      saveDesign() {
+        // Save to Firebase/backend or generate download link
+      }
     }
-  });
-  
-  // Load saved message on page load
-  window.addEventListener('DOMContentLoaded', () => {
-    const savedText = localStorage.getItem('customMessage');
-    if (savedText) document.getElementById('display-message').innerText = savedText;
-  });
+  };

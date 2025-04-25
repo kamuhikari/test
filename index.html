@@ -8,8 +8,21 @@
 </head>
 <body>
     
-    <div id="display-message">Happy Birthday Helena!</div>
-    <button id="edit-btn">Edit</button>
+    <template>
+        <div class="template-editor">
+          <!-- Editable Components -->
+          <div v-for="(item, index) in editableItems" :key="index">
+            <input v-model="item.text" placeholder="Enter text">
+            <color-picker v-model="item.color"></color-picker>
+            <button @click="saveDesign">Save Changes</button>
+          </div>
+          
+          <!-- Preview -->
+          <div class="template-preview">
+            <h1 :style="{ color: editableItems[0].color }">{{ editableItems[0].text }}</h1>
+          </div>
+        </div>
+      </template>
       
       <script src="index.js"></script>
 </body>
