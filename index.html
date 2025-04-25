@@ -1,0 +1,41 @@
+<template>
+    <draggable 
+      v-model="items" 
+      group="items" 
+      @start="drag=true" 
+      @end="drag=false"
+      item-key="id"
+    >
+      <template #item="{element}">
+        <div class="item">
+          {{ element.text }}
+        </div>
+      </template>
+    </draggable>
+  </template>
+  
+  <script>
+  import draggable from 'vuedraggable';
+  
+  export default {
+    components: { draggable },
+    data() {
+      return {
+        items: [
+          { id: 1, text: 'Item 1' },
+          { id: 2, text: 'Item 2' },
+          { id: 3, text: 'Item 3' }
+        ]
+      };
+    }
+  };
+  </script>
+  
+  <style>
+  .item {
+    padding: 16px;
+    margin: 8px;
+    background: #f0f0f0;
+    cursor: move;
+  }
+  </style>
